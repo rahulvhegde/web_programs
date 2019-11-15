@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Growing and shrinking of text</title>
+</head>
+<body>
+    <h2 align="centre" id="text"></h2>
+    <script type="text/javascript">
+    var text=document.getElementById("text");
+    var font=5;
+    var flag=0;
+    function inc()
+    {
+        text.style.fontSize=font+"pt";
+        font++;
+        text.style.color="red";
+        text.innerHTML="TEXT_GROWING";
+        if(font==50)
+        {
+            flag=1;
+        }
+    }
+    function dec()
+    {
+        text.style.fontSize=font+"pt";
+        font--;
+        text.style.color="blue";
+        text.innerHTML="TEXT_SHRINKING";
+        if(font==5)
+        {
+            flag=0;
+        }
+    }
+    var time=setInterval(function(){
+        if(flag==1)
+        {
+            dec();
+        }
+        if(flag==0)
+        {
+            inc();
+        }
+    },100);
+    </script>
+
+</body>
+</html>

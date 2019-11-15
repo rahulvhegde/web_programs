@@ -1,0 +1,24 @@
+                               <!DOCTYPE html>
+<html>
+<head>
+    <title>Square and cube</title>
+</head>
+<body bgcolor="cyan">
+    <h1 align="centre">Square and cube</h1>
+    <table align="centre" border="2" id="table">
+        <tr>
+            <th>Number</th>
+            <th>Square</th>
+            <th>Cube</th>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var result='';
+        for(var n=1;n<=10;n++)
+        {
+            result+='<tr><td>'+n+'</td><td>'+n*n+'</td><td>'+n*n*n+'</td></tr>'
+        }
+        document.getElementById("table").innerHTML+=result;
+    </script>
+</body>
+</html>
